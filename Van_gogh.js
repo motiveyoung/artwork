@@ -13,6 +13,7 @@ function draw() {
   face();
   mouth();
     if(mouseIsPressed){
-    a += 5;
+    a += 3;
     }
+    smoke();
 }

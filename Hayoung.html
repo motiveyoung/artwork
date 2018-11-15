@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title> Main </title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Lobster');
+			
+			#emp{
+				width: 100%;
+				height: 18%;
+			}
+			.MainTitle{
+				width: 400px;
+				height: 400px;
+				text-align: center;
+				font-family: 'Lobster', cursive;
+				font-size: 50px;
+				line-height: 400px;
+				margin:20px auto;
+				border-radius: 50%;
+				background: blue;
+				transition:all 0.5s;
+				background-color:red;
+				opacity : 0.8;
+			}
+			
+			.effect1:hover {
+				box-shadow: inset 0px 0px 0 200px rgba(0,0,0,0.5);
+				color:#fff;
+			}
+		
+			body{
+				background-image: url('backImg.jpg');
+				background-size: 100% 100%;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(){
+				$(".MainTitle").click(function(){
+					location.href = 'Login.html';
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id = "emp"></div>
+		<div class = "MainTitle effect1">
+			<span>Art Young</span>
+		</div>
+	</body>
+</html>

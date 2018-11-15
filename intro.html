@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title> Menu </title>
+		<mega name = "viewport" content = "user-scalable=no.initial-scale=1, maximum-scale=1" />
+		<style>
+			 @import url('https://fonts.googleapis.com/css?family=Lobster');
+		
+			body{
+				background-image: url('backImg.jpg');
+				background-size: 100% 100%;
+			}
+			#Osaka{
+				text-align: center;
+				font-family: 'Lobster', cursive;
+				font-size: 50px;
+				height: 150px;
+				width: 150px;
+				line-height: 150px;
+				margin:auto;
+			}
+
+			#MainBoard{
+				margin: auto;
+				width: 70%;
+				top: 10px;
+				background-color: rgba(255,255,255,0.6);
+			}
+			.menu-bar {
+			  background: red;;
+			  display: inline-block;
+			  width: 100%;
+			}
+			.menu { margin: 0; padding: 0; }
+			.menu li {
+			  float: left;
+			  list-style:none;
+			  position: relative;
+			}
+			.menu li:hover { background: white; }
+			.menu li:hover>a { color: red; }
+			.menu a {
+			  color: white;
+			  display: block;
+			  padding: 15px 42px;
+			  text-decoration: none;
+			}
+			.menu ul {
+			  background: #eee;
+			  border: 1px solid silver;
+			  display: none;
+			  padding: 0;
+			  position: absolute;
+			  left: 0;
+			  top: 100%;
+			  width: 180px;
+			}
+			.menu ul li { float: none; }
+			.menu ul li:hover { background: #ddd; }
+			.menu ul li:hover a { color: black; }
+			.menu ul a { color: black; }
+			.menu ul ul { left: 100%; top: 0; }
+			.menu ul ul li {float:left; margin-right:10px;}
+			.Food { border-radius: 15px; }
+			.Place { border-radius: 15px; }
+
+		</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+			$(function(){
+			  $(".menu li").hover(function(){
+				$('ul:first',this).show();
+			  }, function(){
+				$('ul:first',this).hide();
+			  });
+			  $(".menu>li:has(ul)>a").each( function() {
+				$(this).html( $(this).html()+' &or;' );
+			  });
+			  $(".menu ul li:has(ul)")
+				.find("a:first")
+				.append("<p style='float:righ;margin:-3px'>&#9656;</p>");
+			});
+
+
+		</script>
+	</head>
+	<body>
+		<div id = "MainBoard">
+		<div id = "Osaka"> <span> Osaka </span> </div>
+
+			<div class='menu-bar'>
+				  <ul class="menu">
+					<li><a href="Hayoung.html">홈</a></li>
+					<li><a href="intro.html">자기 소개</a></li>
+					<li><a href="index.html"> Van Gogh </a>
+					<li><a href="pizza.html"> Pizza</a>
+			</div>
+			<div class = 'youngs'>
+				<div >
+				<b> ▶ 조하영 </b><br />숭실대학교 글로벌 미디어학부 재학 중<br />아직 만들어가고 있는 웹페이지입니다. 앞으로 개인적인 일러스트 작업물들을 게시할 예정입니다! 현재 홈페이지의 배경사진은 일본 야경입니다. 최근 다녀온 여행지로 꽤 힐링을 했던 곳인데, 배경으로나마 함께 감상하시길 바랍니다!  <br/><br/>
+				</div>
+			
+	</body>
+</html>
